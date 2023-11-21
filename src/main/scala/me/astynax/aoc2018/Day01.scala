@@ -18,6 +18,6 @@ object Day01 {
   }
 
   lazy val input: List[Int] =
-    Inputs.readLinesFrom("inputs/Day01.txt")
+    Inputs.readLinesFrom("inputs/Day01.input")
       .map(Integer.parseInt)
 }
