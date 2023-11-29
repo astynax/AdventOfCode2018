@@ -1,10 +1,12 @@
 package me.astynax.aoc2018
 
+import scala.util.Using
+
 object Inputs {
-  def readLinesFrom(path: String): List[String] = {
-    val file = scala.io.Source.fromFile(path)
-    val data = file.getLines().toList
-    file.close()
-    data
-  }
+  def readLinesFrom(path: String): List[String] =
+    Using(
+      scala.io.Source.fromFile(path)
+    ) {
+      _.getLines().toList
+    }.get
 }
