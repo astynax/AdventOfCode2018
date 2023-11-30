@@ -1,7 +1,8 @@
 package me.astynax.aoc2018
 
-import me.astynax.aoc2018.Day04.Decoder
 import org.scalatest.funsuite.AnyFunSuiteLike
+
+import Day04._
 
 class Day04Test extends AnyFunSuiteLike {
 
@@ -45,28 +46,28 @@ class Day04Test extends AnyFunSuiteLike {
   }
 
   test("Decoder.fold input") {
-    assert(Day04.input.nonEmpty)
+    assert(input.nonEmpty)
   }
 
   test("totalAndHot") {
-    assert(Day04.totalAndHot(List(
+    assert(totalAndHot(List(
       5 -> 25, 30 -> 55, 24 -> 29
     )) == (50, 24))
   }
 
   test("step1 on examples") {
-    assert(Day04.step1(Day04.Decoder.fold(example)) == 240)
+    assert(step1(Decoder.fold(example)) == 240)
   }
 
   test("step1 on input") {
-    assert(Day04.step1(Day04.input) == 35623)
+    assert(step1(input) == 35623)
   }
 
   test("step2 on examples") {
-    assert(Day04.step2(Day04.Decoder.fold(example)) == 4455)
+    assert(step2(Decoder.fold(example)) == 4455)
   }
 
   test("step2 on input") {
-    assert(Day04.step2(Day04.input) == 23037)
+    assert(step2(input) == 23037)
   }
 }

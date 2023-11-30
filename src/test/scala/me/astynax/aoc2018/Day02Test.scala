@@ -2,6 +2,8 @@ package me.astynax.aoc2018
 
 import org.scalatest.funsuite.AnyFunSuiteLike
 
+import Day02._
+
 class Day02Test extends AnyFunSuiteLike {
 
   test("step1 on examples") {
@@ -14,11 +16,11 @@ class Day02Test extends AnyFunSuiteLike {
       "abcdee",
       "ababab",
     )
-    assert(Day02.step1(example) == 12)
+    assert(step1(example) == 12)
   }
 
   test("step1 on input") {
-    assert(Day02.step1(Day02.input) == 7192)
+    assert(step1(input) == 7192)
   }
 
   test("step2 on examples") {
@@ -31,10 +33,10 @@ class Day02Test extends AnyFunSuiteLike {
       "axcye",
       "wvxyz",
     )
-    assert(Day02.step2(example) == "fgij")
+    assert(step2(example) == "fgij")
   }
 
   test("step2 on input") {
-    assert(Day02.step2(Day02.input) == "mbruvapghxlzycbhmfqjonsie")
+    assert(step2(input) == "mbruvapghxlzycbhmfqjonsie")
   }
 }

@@ -4,7 +4,6 @@ import org.scalatest.funsuite.AnyFunSuiteLike
 
 import Day06._
 
-
 class Day06Test extends AnyFunSuiteLike {
 
   test("single line decoding") {

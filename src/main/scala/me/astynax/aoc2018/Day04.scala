@@ -1,13 +1,10 @@
 package me.astynax.aoc2018
 
-import scala.util.matching.Regex
-
 object Day04 {
   private type Input = List[Rec]
 
   type Range = (Int, Int)
   case class Rec(guardId: Int, rests: List[Range])
-
 
   object Decoder {
     sealed trait DecoderState
