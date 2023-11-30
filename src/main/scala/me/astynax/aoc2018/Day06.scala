@@ -1,23 +1,22 @@
 package me.astynax.aoc2018
 
 object Day06 {
-  private type Input = List[Pos]
+  private type Input = List[(Pos, Id)]
 
   def step1(items: Input, threshold: Int = 10000): (Int, Int) = {
-    val indexedItems = items.zipWithIndex
-    val minX = items.map(_.x).min
-    val minY = items.map(_.y).min
-    val maxX = items.map(_.x).max
-    val maxY = items.map(_.y).max
+    val minX = items.map(_._1.x).min
+    val minY = items.map(_._1.y).min
+    val maxX = items.map(_._1.x).max
+    val maxY = items.map(_._1.y).max
     val (counts, infinite, total) = (for {
       y <- minY to maxY
       x <- minX to maxX
     } yield Pos(x, y))
       .foldLeft(
-        (Map.empty[Int, Int], Set.empty[Int], 0)
+        (Map.empty[Id, Int], Set.empty[Id], 0)
       ) { (state, p) =>
         val (acc, inf, total) = state
-        val distances = indexedItems
+        val distances = items
           .map { case (x, i) => (x distanceTo p, i) }
           .sortBy(_._1)
         val newTotal = if (distances.map(_._1).sum < threshold) total + 1 else total
@@ -57,6 +56,8 @@ object Day06 {
     } yield Pos(x, y)
 
   lazy val input: Input =
-    Inputs.readLinesFrom(s"inputs/Day06.input")
-      .map(decode(_).get)
+    Id.zipWithIds(
+      Inputs.readLinesFrom(s"inputs/Day06.input")
+        .map(decode(_).get)
+    ).toList
 }

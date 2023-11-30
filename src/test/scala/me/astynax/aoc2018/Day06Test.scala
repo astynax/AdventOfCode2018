@@ -15,14 +15,14 @@ class Day06Test extends AnyFunSuiteLike {
   }
 
   test("solution for example") {
-    assert(step1(List(
+    assert(step1(Id.zipWithIds(List(
       Pos(1, 1),
       Pos(1, 6),
       Pos(8, 3),
       Pos(3, 4),
       Pos(5, 5),
       Pos(8, 9),
-    ), threshold=32) == (17, 16))
+    )).toList, threshold=32) == (17, 16))
   }
 
   test("solution for input") {
