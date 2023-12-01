@@ -5,7 +5,7 @@ import scala.util.Using
 object Inputs {
   def readLinesFrom(path: String): List[String] =
     Using(
-      scala.io.Source.fromFile(path)
+      scala.io.Source.fromResource(path)
     ) {
       _.getLines().toList
     }.get
