@@ -57,7 +57,7 @@ object Day06 {
 
   lazy val input: Input =
     Id.zipWithIds(
-      Inputs.readLinesFrom(s"inputs/Day06.input")
+      Inputs.readLinesFrom("inputs/Day06.input")
         .map(decode(_).get)
     ).toList
 }

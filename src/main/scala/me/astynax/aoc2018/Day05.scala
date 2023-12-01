@@ -35,5 +35,5 @@ object Day05 {
       }.min
 
   lazy val input: Input =
-    Inputs.readLinesFrom(s"inputs/Day05.input").head.toList
+    Inputs.readLinesFrom("inputs/Day05.input").head.toList
 }

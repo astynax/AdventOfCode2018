@@ -7,5 +7,5 @@ object Template {
 
   def step2(items: Input): Int = 0
 
-  lazy val input: Input = Inputs.readLinesFrom(s"inputs/Template.input")
+  lazy val input: Input = Inputs.readLinesFrom("DayXX.input")
 }

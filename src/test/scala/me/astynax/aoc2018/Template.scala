@@ -2,6 +2,8 @@ package me.astynax.aoc2018
 
 import org.scalatest.funsuite.AnyFunSuiteLike
 
+//import DayX._
+
 class Template extends AnyFunSuiteLike {
 
   test("step1 on examples") {

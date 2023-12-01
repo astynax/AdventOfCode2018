@@ -112,7 +112,7 @@ object Day04 {
 
   lazy val input: Input =
     Decoder.fold(
-      Inputs.readLinesFrom(s"inputs/Day04.input")
+      Inputs.readLinesFrom("inputs/Day04.input")
         .sorted
     )
 }
